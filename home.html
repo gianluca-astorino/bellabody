@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -162,12 +162,13 @@
     height: 100px;
   }
 
-  /* @media(max-width:767px) {
+  @media(max-width:767px) {
     .content-body {
       flex-direction: column;
     }
 
     .vl {
+      /* display: none; */
       border-left: none;
       border-right: none;
       border-bottom: 2px solid black;
@@ -182,213 +183,6 @@
       text-align: center;
       font-size: 35px;
   }
-  } */
-  @media(max-width:767px) {
-    .content-body {
-      flex-direction: column;
-    }
-
-    .vl {
-    border-width: 100px;
-    height: 2px;
-    margin-bottom: 35px;
-    margin-top: -30px;
-    }
-    .flex-column-mobile{
-      flex-direction: column;
-    }
-  }
-</style>
-
-
-<script>
-  $(".social-link").on("mouseover", function () {
-    let data = $(this).attr("data-my-element");
-    $(".social-text[data-my-element=" + data + "]").addClass("show");
-  });
-
-  $(".social-link").on("mouseout", function () {
-    $(".social-text").removeClass("show");
-  });
-
-</script> -->
-
-<!DOCTYPE html>
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-
-<div class="content-body">
-  <div class="title align-center flex-column-mobile">
-    <img src="https://res.cloudinary.com/piersolutions/image/upload/v1665966209/A2A5A59E-40B5-4E4B-8CE2-7E40CC57A649_Small-removebg-preview_yntnuo.png"
-      alt="">
-    <div class="vl"></div>
-  </div>
-
-  <div class="wrapper">
-    <h3 class="title">BellaBody PostOp <br> Medspa Ottawa</h3>
-    <p style="font-size: 25px;font-weight:600;text-align: center;margin-top: 10px;">bbl massage plastic surgery aftercare</p>
-    <div class="title">
-
-      <h3 class="social-text" data-my-element="youtube">to <span>YouTube</span></h3>
-      <h3 class="social-text" data-my-element="twitch">to <span>Twitch</span></h3>
-      <h3 class="social-text" data-my-element="instagram">to <span>Instagram</span></h3>
-    </div>
-    <ul class="social-list">
-      <li class="social-link" data-my-element="youtube"><i class="fa fa-phone" style="font-size:24px;"></i></li>
-      <li class="social-link" data-my-element="twitch"><i class="fa fa-envelope" style="font-size:24px;"></i></li>
-      <li class="social-link" data-my-element="instagram"><i class="fa fa-instagram" style="font-size:24px;"></i></li>
-    </ul>
-    <br>
-    <br>
-    <h3 style="font-size: 20px;" class="title">Click <a href="" style="margin-left: 6px; margin-right: 6px;">here </a>
-      to
-      see some photos</h3>
-  </div>
-</div>
-
-
-<style>
-   @import url('http://fonts.cdnfonts.com/css/times-new-roman');
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  /* @media screen and (max-width: 900px) {
-    body {
-      height: 50vh;
-      width: 800px;
-    }
-  } */
-
-  body {
-    /* font-family: "Zen Loop", cursive; */
-    /* font-family: 'Proxima nova'; */
-    font-family: 'Times New Roman', sans-serif;
-    background-color: #E0B0FF;
-    overflow: hidden;
-  }
-
-  .content-body {
-    max-width: 1200px;
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-
-
-
-  .title {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 42px;
-  }
-
-  .align-center {
-    align-items: center;
-  }
-
-  .social-list {
-    list-style: none;
-    display: flex;
-    margin-top: 30px;
-  }
-
-  .social-text {
-    display: none;
-  }
-
-  .social-text[data-my-element="youtube"]>span {
-    color: #F70000;
-  }
-
-  .social-text[data-my-element="twitch"]>span {
-    color: #8C44F7;
-  }
-
-  .social-text[data-my-element="instagram"]>span {
-    background: #f09433;
-    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #fff;
-  }
-
-  .social-text.show {
-    display: block;
-  }
-
-  .social-link {
-    background-color: #E6E6FA;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 15px;
-    box-shadow: 10px 10px 15px -5px rgba(131, 137, 150, .4);
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
-  .social-link:hover {
-    box-shadow: 10px 10px 15px -5px rgba(131, 137, 150, .4), inset 15px 15px 15px -5px rgba(131, 137, 150, .2);
-  }
-
-  .social-link>.fab {
-    font-size: 45px;
-  }
-
-  .social-link:hover>.fa-youtube {
-    color: #F70000;
-  }
-
-  .social-link:hover>.fa-twitch {
-    color: #8C44F7;
-  }
-
-  .social-link:hover>.fa-instagram {
-    background: #f09433;
-    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #fff;
-  }
-
-  .vl {
-    border-left: 2px solid black;
-    margin-left: 40px;
-    margin-right: 40px;
-    height: 100px;
-  }
-
-  @media(max-width:767px) {
-    .content-body {
-      flex-direction: column;
-    }
-
-    .vl {
-    border-width: 100px;
-    height: 2px;
-    margin-bottom: 35px;
-    margin-top: -30px;
-    }
-    .flex-column-mobile{
-      flex-direction: column;
-    }
   }
 </style>
 
